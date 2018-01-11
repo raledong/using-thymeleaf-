@@ -105,4 +105,4 @@ templateEngine.setTemplateResolver(templateResolver);
 
 这里`TemplateEngine`需要的唯一参数就是模板解析器，尽管后面还会介绍许多其他可以设置的参数(消息解析器message resolvers，缓存大小等)。目前我们只需要知道这么多。
 
-我们的模板引擎已经准备就休，现在我们可以开始用Thymeleaf创建页面。
+模板引擎已经准备就绪，现在我们可以开始用Thymeleaf创建页面。
