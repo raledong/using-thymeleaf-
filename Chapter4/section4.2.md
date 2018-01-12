@@ -55,6 +55,7 @@ ${person.createCompleteNameWithSeparator('-')}
 ```
 
 ### 表达式基本对象 Expression Basic Objects ###
+---------------------------------------
 当在上下文变量中计算OGNL表达式时，为了更高的灵活性，一些对象被创建以供表达式使用。这些对象通过`#`为开头的标识被引用。
 * `#ctx`: 上下文
 * `#vars`: 上下文所有变量
@@ -71,6 +72,7 @@ Established locale country: <span th:text="${#locale.country}">US</span>.
 你可以在附录A中查看完整的引用。
 
 ### 表达式工具对象 Expression Utility Objects###
+---------------------------------------
 除了基本对象，Thymeleaf还提供了一组工具对象来帮助我们在表达式中执行一般的任务。
 * `#execInfo`: 被处理的模板的信息.
 * `#messages`: 等价于#{...}
@@ -92,6 +94,7 @@ Established locale country: <span th:text="${#locale.country}">US</span>.
 你可以在附录B中查看每个工具对象提供的功能。
 
 ### 再次格式化我们主页中的日期内容###
+---------------------------------------
 现在我们知道了工具对象，我们可以通过他们换一种方式在主页中展示日期，之前我们在`HomeController`中的代码如下：
 ```
 SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");

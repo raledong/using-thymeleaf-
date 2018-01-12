@@ -34,8 +34,25 @@ URL在web应用的模板中是一类公民，因为它们实在是太重要了�
 * 如果cookies被禁用了，那么`";jsessionid=..."`后缀会被添加至相对路径，这样session就可以被保存。这个叫做 *URL重写（URL Rewriting）*。Thymeleaf允许你使用Servlet API中的`response.encodeURL(...)`方法，为每一个URL加入自定义的重写过滤器
 * `th:href`属性允许我们在模板中额外设置（可选）一个静态的`href`属性。这样的话，这个用于原型设计的静态模板中的链接在浏览器中还是可以跳转的。
 
-与消息语法（`#{...}`）一样，URL本身也可以是另一个表达式的计算结果：
+与消息语法（`#{...}`）一样，URL本身也可以由一个表达式的计算结果得来：
 ```
 <a th:href="@{${url}(orderId=${o.id})}">view</a>
 <a th:href="@{'/details/'+${user.login}(orderId=${o.id})}">view</a>
 ```
+
+### 为我们的主页设计一个菜单 ###
+---------------------------------------
+既然我们已经知道如何创建一个URL连接，那现在让我们在主页上添加一个小菜单从而导航到网站的其它页面。
+```
+<p>Please select an option</p>
+<ol>
+  <li><a href="product/list.html" th:href="@{/product/list}">Product List</a></li>
+  <li><a href="order/list.html" th:href="@{/order/list}">Order List</a></li>
+  <li><a href="subscribe.html" th:href="@{/subscribe}">Subscribe to our Newsletter</a></li>
+  <li><a href="userprofile.html" th:href="@{/userprofile}">See User Profile</a></li>
+</ol>
+```
+
+### 相对服务器根目录的相对路径###
+---------------------------------------
+可以通过添加一个额外的标识来创建相对服务器根目录（而不是相对上下文根目录）的相对路径，从而可以指向同一个服务器之下的另一个上下文。这种类型的URL应该形如`@{~/path/to/something}`。
