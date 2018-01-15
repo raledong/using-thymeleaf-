@@ -1,12 +1,9 @@
 # Summary
-
 * [关于我们](README.md)
 * [1.介绍Thymeleaf](Chapter1/README.md)
     * [1.1 什么是Thymeleaf](Chapter1/section1.1.md)
     * [1.2 Thymeleaf能处理哪些模板](Chapter1/section1.2.md)
     * [1.3 方言：标准方言](Chapter1/section1.3.md)
-    * [1.4 总体架构](Chapter1/section1.4.md)
-    * [1.5 在继续往下读之前，你需要了解的](Chapter1/section1.5.md)
 * [2.用Thymeleaf构建一个虚拟杂货铺](Chapter2/README.md)
     * [2.1 一个杂货铺网页](Chapter2/section2.1.md)
     * [2.2 创建并配置模板引擎](Chapter2/section2.2.md)
@@ -85,4 +82,3 @@
 * [18.附录A Expression Basic Objects](Chapter18/README.md)
 * [19.附录B Expression Utility Objects](Chapter19/README.md)
 * [20.附录C DOM Selector Syntax](Chapter20/README.md)
-
